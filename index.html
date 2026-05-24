@@ -439,22 +439,5 @@
     </footer>
 
   </div>
-
-  <script>
-    const feedbackOverlay = document.querySelector('.feedback-overlay');
-    const feedbackClose = document.querySelector('.feedback-close');
-
-    // Закрытие попапа при клике на крестик
-    feedbackClose.addEventListener('click', function () {
-      feedbackOverlay.classList.add('_hidden');
-    });
-
-    // Закрытие попапа при клике на оверлей (вне модалки)
-    feedbackOverlay.addEventListener('click', function (e) {
-      if (e.target === feedbackOverlay) {
-        feedbackOverlay.classList.add('_hidden');
-      }
-    });
-  </script>
 </body>
 </html>
