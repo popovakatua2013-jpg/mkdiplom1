@@ -603,6 +603,7 @@ button:hover {
 }
 
 .shop-grid {
+  align-items: stretch;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -625,12 +626,12 @@ button:hover {
   object-fit: cover;
   background-color: #f3f3f3;
   position: relative;
-  z-index: 1;
+  /* z-index: 1; */
   margin-bottom: 25px;
 }
 
 .shop-card-content {
-  position: relative;
+ position: relative;
   z-index: 2;
   flex-grow: 1;
   border: 3px solid #b59f5b;
@@ -734,36 +735,35 @@ button:hover {
 .feedback-modal {
   position: relative;
   background-color: #ffffff;
-  padding: 40px 30px;
-  max-width: 400px;
+  padding: 30px 25px;
+  max-width: 390px;
   width: 100%;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  border-radius: 4px;
 }
 
+/*Кнопка закрытия*/
 .feedback-close {
   position: absolute;
-  top: -10px;
-  right: -10px;
+  top: -30px;
+  right: 0;
   background: none;
   border: none;
   font-size: 30px;
-  color: #999999;
+  color:  #ffffff;
   cursor: pointer;
-  padding: 10px 15px;
+  padding: 0;
+   line-height: 1;
 }
 
 .feedback-close:hover {
-  color: #000000;
+  color: #b59f5b;;
   background: none;
 }
 
 .feedback-title {
   margin-bottom: 30px;
-  font-size: 14px;
+  font-size: 20px;
   text-align: center;
   color: #000000;
-  text-transform: uppercase;
 }
 
 .feedback-title::after {
@@ -778,9 +778,9 @@ button:hover {
 .feedback-form label {
   display: block;
   margin-bottom: 8px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .feedback-form input[type="text"],
@@ -852,10 +852,25 @@ button:hover {
   cursor: pointer;
 }
 
-.feedback-radio-label input[type="radio"] {
-  width: auto;
+ .feedback-radio-label input[type="radio"] {
+ -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  width: 18px;
+  height: 18px;
   margin: 0;
   cursor: pointer;
+  outline: none;
+  border: 2px solid #b59f5b;
+  border-radius: 50%;
+  background-color: transparent;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.feedback-radio-label input[type="radio"]:checked {
+  background-color: #ffffff;
+  background-image: radial-gradient(circle, #b59f5b 5px, transparent 5.5px);
 }
 
 .feedback-submit {
